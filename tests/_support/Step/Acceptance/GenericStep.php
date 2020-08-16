@@ -49,6 +49,7 @@ class GenericStep extends AcceptanceTester
     public function preparedClick($element, $timeout = 30): void
     {
         $this->waitForElementClickable($element, $timeout);
+        $this->wait(10);
         $this->click($element);
     }
 
